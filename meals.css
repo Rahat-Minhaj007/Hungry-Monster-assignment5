@@ -1,0 +1,32 @@
+#foods-name{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 30px;
+}
+
+.food{
+    
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+   
+}
+.foodName{
+    font-size: 15px;
+    color: black;
+  
+  
+}
+.food-image{
+    width: 100%;
+    border-radius: 20px;
+}
+.card-text{
+    background-color:rgb(233, 232, 232) ;
+}
+.full-card{
+    
+    box-shadow: 10px 10px 40px rgb(224, 221, 221);
+    
+   
+}
