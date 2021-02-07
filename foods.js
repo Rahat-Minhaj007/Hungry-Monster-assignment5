@@ -10,9 +10,8 @@ button.addEventListener('click', function () {
 
 const foodName = foods => {
   const foodsDiv = document.getElementById("foods-name");
-  for (let i = 0; i < foods.meals.length; i++) {
-
-    const food = foods.meals[i];
+  foods.meals.forEach(food => {
+  
     const foodDiv = document.createElement("div");
     foodDiv.className = "food";
 
@@ -28,8 +27,7 @@ const foodName = foods => {
       `
     foodDiv.innerHTML = foodInfo;
     foodsDiv.appendChild(foodDiv);
-  }
+  });
+
 }
 
-// `<img class="food-image" src=${food.strMealThumb} alt="meal" />
-//         <h3 class="foodName">${food.strMeal}</h3>`
