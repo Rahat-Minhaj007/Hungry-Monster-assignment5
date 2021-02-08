@@ -2,10 +2,16 @@ const button = document.getElementById("button")
 button.addEventListener('click', function () {
 
   const searchInput = document.getElementById('searchInput').value;
-
-  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
+  if(searchInput==""){
+    alert("SORRY SIR, AT FIRST INPUT YOUR MEAL NAME");
+  }
+  else{
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
     .then(res => res.json())
     .then(data => foodName(data))
+  }
+
+ 
     
 })
 
@@ -34,7 +40,7 @@ const foodName = foods => {
 
 const displayFoodDetail =(name) =>{
 
-console.log( name);
+console.log(name);
 const foodDetail= document.getElementById("food-detail")
 foodDetail.innerHTML=`
 
@@ -48,8 +54,7 @@ foodDetail.innerHTML=`
   </div>
 </div>
 
-
-  `
+`
 }
 
 
